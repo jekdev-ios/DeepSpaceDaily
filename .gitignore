@@ -100,3 +100,7 @@ auth0.plist
 .build/
 
 .swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+
+DeepSpaceDaily/Resources/Certificates/spaceflightnewsapi.net.der
+
+DeepSpaceDaily/Resources/Certificates/spaceflightnewsapi.net.pem
