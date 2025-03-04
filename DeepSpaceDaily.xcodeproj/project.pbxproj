@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		840FE4702D736811001299FD /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 840FE46F2D736811001299FD /* Swinject */; };
+		846276452D71719A00E91A60 /* Auth0 in Frameworks */ = {isa = PBXBuildFile; productRef = 846276442D71719A00E91A60 /* Auth0 */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		846276272D716FEF00E91A60 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				846276452D71719A00E91A60 /* Auth0 in Frameworks */,
+				840FE4702D736811001299FD /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +119,8 @@
 			);
 			name = DeepSpaceDaily;
 			packageProductDependencies = (
+				846276442D71719A00E91A60 /* Auth0 */,
+				840FE46F2D736811001299FD /* Swinject */,
 			);
 			productName = DeepSpaceDaily;
 			productReference = 846276112D716FED00E91A60 /* DeepSpaceDaily.app */;
@@ -195,6 +204,10 @@
 			);
 			mainGroup = 846276082D716FED00E91A60;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				846276432D71719A00E91A60 /* XCRemoteSwiftPackageReference "Auth0" */,
+				840FE46E2D736811001299FD /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 846276122D716FED00E91A60 /* Products */;
 			projectDirPath = "";
@@ -399,8 +412,10 @@
 				DEVELOPMENT_TEAM = 94SWBTH9HH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_BGTaskSchedulerPermittedIdentifiers = "com.deepspacedaily.apprefresh com.deepspacedaily.contentfetch";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UIBackgroundModes = "fetch processing remote-notification";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -428,8 +443,10 @@
 				DEVELOPMENT_TEAM = 94SWBTH9HH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_BGTaskSchedulerPermittedIdentifiers = "com.deepspacedaily.apprefresh com.deepspacedaily.contentfetch";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UIBackgroundModes = "fetch processing remote-notification";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -558,6 +575,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		840FE46E2D736811001299FD /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.1;
+			};
+		};
+		846276432D71719A00E91A60 /* XCRemoteSwiftPackageReference "Auth0" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/auth0/Auth0.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		840FE46F2D736811001299FD /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 840FE46E2D736811001299FD /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		846276442D71719A00E91A60 /* Auth0 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 846276432D71719A00E91A60 /* XCRemoteSwiftPackageReference "Auth0" */;
+			productName = Auth0;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 846276092D716FED00E91A60 /* Project object */;
 }
